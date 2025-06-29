@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar"
 
-export default function Root() {
+
+function Root() {
   return (
     <div>
       <NavBar />
@@ -11,3 +12,4 @@ export default function Root() {
     </div>
   );
 }
+export default Root

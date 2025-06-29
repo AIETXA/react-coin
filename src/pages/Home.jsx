@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [coins, setCoins] = useState([]);
@@ -35,11 +36,23 @@ function Home() {
   if (coins.length === 0) return <p>No se encontraron criptomonedas</p>;
 
   return (
-    <ul>
+    <>
+    <h2>Criptomonedas</h2>
+    <ul className='criptos'>
       {coins.map((coin) => (
-        <li key={coin.id}>{coin.name}</li>
+        <li key={coin.id} className='card'>
+        <Link to={`/coin/${coin.id}`}>
+         <img
+          src={`https://assets.coincap.io/assets/icons/${coin.symbol.toLowerCase()}@2x.png`}
+          alt={coin.name}
+          onError={(e) => (e.target.src = '/logo-default.png')}
+          style={{ width: '24px', height: '24px', marginRight: '8px' }}
+        />
+        {coin.name}</Link>
+        </li>
       ))}
     </ul>
+    </>
   );
 }
 

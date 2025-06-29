@@ -1,0 +1,18 @@
+
+.coin {
+  background: #f4f3f3ba;
+  color: black;
+  padding: 1.5rem;
+  margin: 7rem auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.717);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.717);
+  
+}
+
+.coin h2 {
+    color:rgb(28, 155, 155);
+}
+
